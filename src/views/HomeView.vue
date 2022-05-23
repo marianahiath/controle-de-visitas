@@ -18,7 +18,7 @@
       </div>
 
       <div class="column square is-3 text box">
-          <p class="text-left is-size-5">Filiais</p>
+        <p class="text-left is-size-5">Filiais</p>
         <p class="is-size-2 text-bold mb-2 has-text-info-dark">1227</p>
         <div class="flex">
           <div>
@@ -52,7 +52,7 @@
 
     <section class="columns">
       <div class="column align-center">
-        <table class="table is-bordered">
+        <table class="table is-bordered is-narrow is-hoverable is-fullwidth table-size">
         <thead>
           <tr>
             <th>Base</th>
@@ -70,12 +70,30 @@
             <td>1</td>
             <td>3</td>
             <td>66</td>
-            <td>nanana</td>
+            <td>
+              <div class="flex">
+                <input type="text">
+                <button class="button is-small is-link is-light">teste</button>
+                <button class="button is-small is-link is-light">teste</button>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th>nanana</th>
+            <th>Petrópolis</th>
+            <td>10</td>
+            <td>0</td>
+            <td>10</td>
+            <td>100</td>
+            <td>
+              <div class="flex">
+                <input type="text">
+                <button class="button is-small is-link is-light">teste</button>
+                <button class="button is-small is-link is-light">teste</button>
+              </div>
+            </td>
           </tr>
         </tbody>
+        <tfoot></tfoot>
       </table>
       </div>
     </section>
@@ -99,7 +117,6 @@ export default {
   .square {
     width: 280px;
     height: 200px;
-    border-radius: 8px;
     background: #fff;
 
     padding: 0 30px;
@@ -139,15 +156,25 @@ export default {
     justify-content: space-around;
   }
 
-  .nanana {
-    background: red;
-    width: 100%;
-    height: 100px;
-  }
-
   .align-center {
     display: flex;
     align-content: center;
     justify-content: center;
+  }
+
+  .table-size {
+    width: 80%;
+    box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.18);
+
+    border-radius: 8px;
+  }
+
+  input {
+    border: none;
+    width: 90%;
+    height: 100%;
+    padding: 8px;
+    margin-right: 5px;
+    /* background: #f1f1f1; */
   }
 </style>
