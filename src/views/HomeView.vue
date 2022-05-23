@@ -49,6 +49,36 @@
         </div>
       </div>
     </section>
+
+    <section class="columns">
+      <div class="column align-center">
+        <table class="table is-bordered">
+        <thead>
+          <tr>
+            <th>Base</th>
+            <th>Sim</th>
+            <th>Não</th>
+            <th>Total</th>
+            <th>%</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Teresópolis</th>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>66</td>
+            <td>nanana</td>
+          </tr>
+          <tr>
+            <th>nanana</th>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -64,7 +94,6 @@ export default {
     display: flex;
     justify-content: space-around;
     margin: 0 150px;
-    height: 100vh;
   }
 
   .square {
@@ -108,5 +137,17 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .nanana {
+    background: red;
+    width: 100%;
+    height: 100px;
+  }
+
+  .align-center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 </style>
