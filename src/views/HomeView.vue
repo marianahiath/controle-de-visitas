@@ -2,8 +2,6 @@
   <main class="main-container">
     <section class="align-center mb-5 mt-5">
       <div class="is-flex date-container">
-
-        
         <button class="button is-small">
         <fa icon="angle-left" class="has-text-info" />
         </button>
@@ -11,10 +9,9 @@
         <button class="button is-small">
           <fa icon="angle-right" class="has-text-info" />
         </button>
-        
       </div>
     </section>
-    <section class="columns wrapped">
+    <section class="columns wrapped mb-5 mt-5">
       <div class="column square is-3 text box">
         <p class="text-left is-size-5">Matriz</p>
         <p class="is-size-2 text-bold mb-2 has-text-info-dark">1227</p>
@@ -64,13 +61,16 @@
       </div>
     </section>
 
-    <div class="align-center mb-3">
+    <div class="align-center mb-5">
       <div class="section-separator"></div>
     </div>
 
-    <section class="align-center mb-2">
+    <section class="align-center mb-5 mt-5">
       <div class="search-container">
-        <input class="input is-normal search box" type="text" placeholder="Pesquisar">
+        <input class="input is-normal search" type="text" placeholder="Pesquisar">
+        <button class="button has-text-link">
+          <fa  icon="search"/>
+        </button>
       </div>
     </section>
 
@@ -237,7 +237,7 @@ export default {
   .wrapped {
     display: flex;
     justify-content: space-around;
-    margin: 0 150px;
+    margin: 0 200px;
   }
 
   .square {
@@ -325,7 +325,6 @@ export default {
     width: 90%;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
   }
 
   .search {
