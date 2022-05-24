@@ -1,34 +1,34 @@
 <template>
-  <main >
+  <main>
     <section class="columns wrapped">
       <div class="column square is-3 text box">
         <p class="text-left is-size-5">Matriz</p>
-        <p class="is-size-2 text-bold mb-2 has-text-info-dark">1227</p>
+        <p class="is-size-2 text-bold mb-2 has-text-info-dark">512</p>
         <div class="flex">
           <div>
             <p class="is-size-5 mb-1">sim</p>
-            <p class="is-size-4 has-text-weight-semibold">70%</p>
+            <p class="is-size-4 has-text-weight-semibold">90%</p>
           </div>
           <div class="separator"></div>
           <div>
             <p class="is-size-5 mb-1">não</p>
-            <p class="is-size-4 has-text-weight-semibold">30%</p>
+            <p class="is-size-4 has-text-weight-semibold">10%</p>
           </div>
         </div>
       </div>
 
       <div class="column square is-3 text box">
         <p class="text-left is-size-5">Filiais</p>
-        <p class="is-size-2 text-bold mb-2 has-text-info-dark">1227</p>
+        <p class="is-size-2 text-bold mb-2 has-text-info-dark">715</p>
         <div class="flex">
           <div>
             <p class="is-size-5 mb-1">sim</p>
-            <p class="is-size-4 has-text-weight-semibold">70%</p>
+            <p class="is-size-4 has-text-weight-semibold">25%</p>
           </div>
           <div class="separator"></div>
           <div>
             <p class="is-size-5 mb-1">não</p>
-            <p class="is-size-4 has-text-weight-semibold">30%</p>
+            <p class="is-size-4 has-text-weight-semibold">75%</p>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
             <td>66</td>
             <td>
               <div class="flex">
-                <input type="text">
+                <input class="input is-small" type="text">
                 <button class="button is-small is-link is-light">teste</button>
                 <button class="button is-small is-link is-light">teste</button>
               </div>
@@ -86,7 +86,7 @@
             <td>100</td>
             <td>
               <div class="flex">
-                <input type="text">
+                <input class="input is-small" type="text" value="Uma observação aqui">
                 <button class="button is-small is-link is-light">teste</button>
                 <button class="button is-small is-link is-light">teste</button>
               </div>
@@ -165,16 +165,10 @@ export default {
   .table-size {
     width: 80%;
     box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.18);
-
-    border-radius: 8px;
   }
 
   input {
     border: none;
-    width: 90%;
-    height: 100%;
-    padding: 8px;
-    margin-right: 5px;
-    /* background: #f1f1f1; */
+    margin-right: 8px;
   }
 </style>
