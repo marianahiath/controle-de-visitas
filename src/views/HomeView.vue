@@ -1,5 +1,19 @@
 <template>
-  <main >
+  <main class="main-container">
+    <section class="align-center mb-5 mt-5">
+      <div class="is-flex date-container">
+
+        
+        <button class="button is-small">
+        <fa icon="angle-left" class="has-text-info" />
+        </button>
+        <h1 class="is-size-4">MAIO, 2022</h1>
+        <button class="button is-small">
+          <fa icon="angle-right" class="has-text-info" />
+        </button>
+        
+      </div>
+    </section>
     <section class="columns wrapped">
       <div class="column square is-3 text box">
         <p class="text-left is-size-5">Matriz</p>
@@ -50,21 +64,30 @@
       </div>
     </section>
 
+    <div class="align-center mb-3">
+      <div class="section-separator"></div>
+    </div>
+
+    <section class="align-center mb-2">
+      <div class="search-container">
+        <input class="input is-normal search box" type="text" placeholder="Pesquisar">
+      </div>
+    </section>
+
     <section class="columns">
       <div class="column align-center">
-        <table class="table table-size is-bordered is-narrow is-hoverable">
+        <table class="table table-size is-striped is-bordered is-narrow is-hoverable">
         <thead>
-          <tr class="has-text-centered">
-            <th>Base</th>
-            <th class="has-text-centered">Sim</th>
-            <th class="has-text-centered">Não</th>
-            <th class="has-text-centered">Total</th>
-            <th class="has-text-centered">%</th>
-            <th class="column-fixed">Observações</th>
+          <tr class="has-text-centered head-size">
+            <th class="is-vcentered">Base</th>
+            <th class="has-text-centered is-vcentered">Sim</th>
+            <th class="has-text-centered is-vcentered">Não</th>
+            <th class="has-text-centered is-vcentered">Total</th>
+            <th class="has-text-centered is-vcentered">%</th>
+            <th class="column-fixed is-vcentered">Observações</th>
           </tr>
         </thead>
         <tbody>
-
           <tr>
             <th>Teresópolis</th>
             <td>2</td>
@@ -74,32 +97,7 @@
             <td>
               <div class="flex">
                 <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
-                </button>
-                <button class="button is-small is-link is-light button-hover">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                  </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
-                </button>
-                <button class="button is-small is-link is-light button-hover">
+                <button class="button is-small button-hover has-text-link">
                   <fa  icon="floppy-disk"/>
                   <span class="ml-2">Salvar</span>
                 </button>
@@ -116,11 +114,24 @@
             <td>
               <div class="flex">
                 <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
+                <button class="button is-small button-hover has-text-link">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
                 </button>
-                <button class="button is-small is-link is-light button-hover">
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Teresópolis</th>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>66</td>
+            <td>
+              <div class="flex">
+                <input class="input is-small" type="text">
+                <button class="button is-small button-hover has-text-link">
                   <fa  icon="floppy-disk"/>
                   <span class="ml-2">Salvar</span>
                 </button>
@@ -137,11 +148,7 @@
             <td>
               <div class="flex">
                 <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
-                </button>
-                <button class="button is-small is-link is-light button-hover">
+                <button class="button is-small button-hover has-text-link">
                   <fa  icon="floppy-disk"/>
                   <span class="ml-2">Salvar</span>
                 </button>
@@ -158,12 +165,8 @@
             <td>
               <div class="flex">
                 <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
-                </button>
-                <button class="button is-small is-link is-light button-hover">
-                  <fa  icon="floppy-disk"/>
+                <button class="button is-small button-hover has-text-link">
+                  <fa icon="floppy-disk"/>
                   <span class="ml-2">Salvar</span>
                 </button>
               </div>
@@ -179,11 +182,7 @@
             <td>
               <div class="flex">
                 <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
-                </button>
-                <button class="button is-small is-link is-light button-hover">
+                <button class="button is-small button-hover has-text-link">
                   <fa  icon="floppy-disk"/>
                   <span class="ml-2">Salvar</span>
                 </button>
@@ -200,11 +199,7 @@
             <td>
               <div class="flex">
                 <input class="input is-small" type="text">
-                <button class="button is-small is-link is-light mr-1 button-hover">
-                  <fa  icon="pen"/>
-                  <span class="ml-2">Editar</span>
-                </button>
-                <button class="button is-small is-link is-light button-hover">
+                <button class="button is-small button-hover has-text-link">
                   <fa  icon="floppy-disk"/>
                   <span class="ml-2">Salvar</span>
                 </button>
@@ -228,6 +223,17 @@ export default {
 </script>
 
 <style scoped>
+
+  .main-container {
+    width: 100%;
+  }
+
+  .date-container {
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .wrapped {
     display: flex;
     justify-content: space-around;
@@ -235,7 +241,7 @@ export default {
   }
 
   .square {
-    width: 280px;
+    width: 290px;
     height: 200px;
     background: #fff;
 
@@ -283,7 +289,7 @@ export default {
   }
 
   .table-size {
-    width: 80%;
+    width: 90%;
     box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.18);
   }
 
@@ -315,4 +321,26 @@ export default {
     width: 500px;
   }
 
+  .search-container {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .search {
+    width: 200px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .section-separator {
+    width: 60%;
+    height: 1px;
+    background: #5658583a;
+  }
+
+  .head-size {
+    height: 50px;
+  }
 </style>

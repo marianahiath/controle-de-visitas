@@ -4,7 +4,11 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Bulma Table
-$table-row-hover-background-color: rgba(35, 38, 78, 0.123);
-
+$table-row-hover-background-color: rgba(35, 38, 78, 0.13);
+$table-head-cell-color: #0d3753;
+// $table-head-background-color: #fff;
+$table-striped-row-even-background-color: rgba(112, 112, 114, 0.082);
+$table-striped-row-even-hover-background-color: rgba(35, 38, 78, 0.13);
+$button-background-color: #fff;
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/bulma.sass";
