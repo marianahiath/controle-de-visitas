@@ -54,16 +54,17 @@
       <div class="column align-center">
         <table class="table table-size is-bordered is-narrow is-hoverable">
         <thead>
-          <tr>
+          <tr class="has-text-centered">
             <th>Base</th>
-            <th>Sim</th>
-            <th>Não</th>
-            <th>Total</th>
-            <th>%</th>
-            <th>Observações</th>
+            <th class="has-text-centered">Sim</th>
+            <th class="has-text-centered">Não</th>
+            <th class="has-text-centered">Total</th>
+            <th class="has-text-centered">%</th>
+            <th class="column-fixed">Observações</th>
           </tr>
         </thead>
         <tbody>
+
           <tr>
             <th>Teresópolis</th>
             <td>2</td>
@@ -72,12 +73,124 @@
             <td>66</td>
             <td>
               <div class="flex">
-                <input type="text">
-                <button class="button is-small is-link is-light">teste</button>
-                <button class="button is-small is-link is-light">teste</button>
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                  </button>
               </div>
             </td>
           </tr>
+
+          <tr>
+            <th>Teresópolis</th>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>66</td>
+            <td>
+              <div class="flex">
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Teresópolis</th>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>66</td>
+            <td>
+              <div class="flex">
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Brasília</th>
+            <td>10</td>
+            <td>0</td>
+            <td>10</td>
+            <td>100</td>
+            <td>
+              <div class="flex">
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Rio de Janeiro</th>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>66</td>
+            <td>
+              <div class="flex">
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>São Paulo</th>
+            <td>10</td>
+            <td>0</td>
+            <td>10</td>
+            <td>100</td>
+            <td>
+              <div class="flex">
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
           <tr>
             <th>Petrópolis</th>
             <td>10</td>
@@ -86,12 +199,19 @@
             <td>100</td>
             <td>
               <div class="flex">
-                <input type="text">
-                <button class="button is-small is-link is-light">teste</button>
-                <button class="button is-small is-link is-light">teste</button>
+                <input class="input is-small" type="text">
+                <button class="button is-small is-link is-light mr-1 button-hover">
+                  <fa  icon="pen"/>
+                  <span class="ml-2">Editar</span>
+                </button>
+                <button class="button is-small is-link is-light button-hover">
+                  <fa  icon="floppy-disk"/>
+                  <span class="ml-2">Salvar</span>
+                </button>
               </div>
             </td>
           </tr>
+
         </tbody>
         <tfoot></tfoot>
       </table>
@@ -169,10 +289,30 @@ export default {
 
   input {
     border: none;
-    width: 90%;
-    height: 100%;
-    padding: 8px;
-    margin-right: 5px;
-    /* background: #f1f1f1; */
+    margin-right: 8px;
   }
+
+  .button-hover {
+    width: 46px;
+    transition: width 0.15s ease-out;
+  }
+
+  .button-hover:hover {
+    display: inline;
+    width: 92px;
+  }
+
+  .button-hover span {
+    display:none;
+    /* width: 50px; */
+  }
+
+  .button-hover:hover span {
+    display: inline;
+  }
+
+  .column-fixed {
+    width: 500px;
+  }
+
 </style>
