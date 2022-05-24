@@ -52,7 +52,7 @@
 
     <section class="columns">
       <div class="column align-center">
-        <table class="table is-bordered is-narrow is-hoverable is-fullwidth table-size">
+        <table class="table table-size is-bordered is-narrow is-hoverable">
         <thead>
           <tr>
             <th>Base</th>
@@ -165,8 +165,6 @@ export default {
   .table-size {
     width: 80%;
     box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.18);
-
-    border-radius: 8px;
   }
 
   input {
