@@ -16,12 +16,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #f1f1f1;
 }
 
 nav {
   padding: 20px;
-  background: #fff;
+  background: rgb(48, 48, 48);
   box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.18);
 }
 

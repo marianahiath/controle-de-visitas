@@ -1,20 +1,20 @@
 <template>
   <main class="main-container">
+    
     <section class="align-center mb-5 mt-5">
-      <div class="is-flex date-container">
 
-        
+      <div class="is-flex date-container">
         <button class="button is-small">
-        <fa icon="angle-left" class="has-text-info" />
+          <fa icon="angle-left" class="has-text-info" />
         </button>
         <h1 class="is-size-4">MAIO, 2022</h1>
         <button class="button is-small">
           <fa icon="angle-right" class="has-text-info" />
         </button>
-        
       </div>
     </section>
-    <section class="columns wrapped">
+
+    <!-- <section class="columns wrapped">
       <div class="column square is-3 text box">
         <p class="text-left is-size-5">Matriz</p>
         <p class="is-size-2 text-bold mb-2 has-text-info-dark">1227</p>
@@ -62,170 +62,345 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <div class="align-center mb-3">
       <div class="section-separator"></div>
     </div>
 
-    <section class="align-center mb-2">
+    <!-- <section class="align-center mb-2">
       <div class="search-container">
-        <input class="input is-normal search box" type="text" placeholder="Pesquisar">
+        <input
+          class="input is-normal search box"
+          type="text"
+          placeholder="Pesquisar"
+        />
       </div>
-    </section>
+    </section> -->
 
-    <section class="columns">
-      <div class="column align-center">
-        <table class="table table-size is-striped is-bordered is-narrow is-hoverable">
-        <thead>
-          <tr class="has-text-centered head-size">
-            <th class="is-vcentered">Base</th>
-            <th class="has-text-centered is-vcentered">Sim</th>
-            <th class="has-text-centered is-vcentered">Não</th>
-            <th class="has-text-centered is-vcentered">Total</th>
-            <th class="has-text-centered is-vcentered">%</th>
-            <th class="column-fixed is-vcentered">Observações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+    <div class="has-text-right mt-6">
+      <div
+        class="table-container mb-0 has-text-centered is-flex is-flex-direction-column is-align-items-center"
+      >
+        <table class="table is-striped is-bordered is-narrow is-hoverable">
+          
+          <thead style="display: block">
+            <tr class="has-text-centered head-size" style="width: 100px">
+              <th class="is-vcentered" style="width: 150px">Base</th>
+              <th class="has-text-centered is-vcentered" style="width: 50px">
+                Sim
+              </th>
+              <th class="has-text-centered is-vcentered" style="width: 50px">
+                Não
+              </th>
+              <th class="has-text-centered is-vcentered" style="width: 70px">
+                Total
+              </th>
+              <th class="has-text-centered is-vcentered" style="width: 50px">
+                %
+              </th>
+              <th class="is-vcentered" style="width: 400px">Observações</th>
+            </tr>
+          </thead>
 
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+          <tbody
+            class="myBody"
+            style="display: block; height: 200px; overflow: auto"
+          >
+            <tr class="is-selected">
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">10</td>
+              <td style="width: 50px">24</td>
+              <td style="width: 70px">65</td>
+              <td style="width: 50px">64%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
 
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">23%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
 
-          <tr>
-            <th>Brasília</th>
-            <td>10</td>
-            <td>0</td>
-            <td>10</td>
-            <td>100</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
 
-          <tr>
-            <th>Rio de Janeiro</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
 
-          <tr>
-            <th>São Paulo</th>
-            <td>10</td>
-            <td>0</td>
-            <td>10</td>
-            <td>100</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">23%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
 
-          <tr>
-            <th>Petrópolis</th>
-            <td>10</td>
-            <td>0</td>
-            <td>10</td>
-            <td>100</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text">
-                <button class="button is-small button-hover has-text-link">
-                  <fa  icon="floppy-disk"/>
-                  <span class="ml-2">Salvar</span>
-                </button>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
 
-        </tbody>
-        <tfoot></tfoot>
-      </table>
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">56</td>
+              <td style="width: 70px">22</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">23</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">56</td>
+              <td style="width: 50px">23%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">22</td>
+              <td style="width: 50px">77</td>
+              <td style="width: 70px">21</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">12</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">21</td>
+              <td style="width: 50px">12</td>
+              <td style="width: 70px">67</td>
+              <td style="width: 50px">23%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">66</td>
+              <td style="width: 50px">2</td>
+              <td style="width: 70px">11</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">34</td>
+              <td style="width: 50px">86</td>
+              <td style="width: 70px">23</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Teresópolis</th>
+              <td style="width: 50px">34</td>
+              <td style="width: 50px">34</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">23%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">66</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="width: 150px">Rio de Janeiro</th>
+              <td style="width: 50px">2</td>
+              <td style="width: 50px">1</td>
+              <td style="width: 70px">3</td>
+              <td style="width: 50px">23%</td>
+              <td style="width: 400px">
+                <div class="flex">
+                  <input class="input is-small" type="text" />
+                  <button class="button is-small button-hover has-text-link">
+                    <fa icon="floppy-disk" />
+                    <span class="ml-2">Salvar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
       </div>
-    </section>
+    </div>
   </main>
 </template>
 
 <script>
-
-export default {
-  
-}
+  export default {
+  }
 </script>
 
-<style scoped>
-
-  .main-container {
+<style>
+  /* .myTable {
+    display: block;
     width: 100%;
+    height: 100px;
+    overflow-y: scroll;
+  } */
+
+  .myBody::-webkit-scrollbar {
+    display: none;
   }
 
   .date-container {
@@ -272,7 +447,7 @@ export default {
   .separator {
     width: 1.3px;
     height: 40px;
-    background: 	#1d72aa;
+    background: #1d72aa;
   }
 
   .flex {
@@ -288,10 +463,11 @@ export default {
     justify-content: center;
   }
 
-  .table-size {
+  /* .table-size {
     width: 90%;
+    height: 300px !important;
     box-shadow: 4px 4px 12px 0px rgba(50, 50, 50, 0.18);
-  }
+  } */
 
   input {
     border: none;
@@ -300,7 +476,7 @@ export default {
 
   .button-hover {
     width: 46px;
-    transition: width 0.15s ease-out;
+    /* transition: width 0.15s ease-out; */
   }
 
   .button-hover:hover {
@@ -309,7 +485,7 @@ export default {
   }
 
   .button-hover span {
-    display:none;
+    display: none;
     /* width: 50px; */
   }
 
@@ -317,9 +493,9 @@ export default {
     display: inline;
   }
 
-  .column-fixed {
+  /* .column-fixed {
     width: 500px;
-  }
+  } */
 
   .search-container {
     width: 90%;
