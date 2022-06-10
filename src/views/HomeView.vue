@@ -1,16 +1,19 @@
 <template>
   <main class="main-container">
-    <section class="align-center mb-5 mt-5">
-      <div class="is-flex date-container">
-        <button class="button is-small">
-        <fa icon="angle-left" class="has-text-info" />
-        </button>
-        <h1 class="is-size-4">MAIO, 2022</h1>
-        <button class="button is-small">
-          <fa icon="angle-right" class="has-text-info" />
-        </button>
-      </div>
+
+    <section class="wrapper">
+        <h1>Histórico de Visitas</h1>
+        <div class="date-wrapper">
+          <button class="button is-small">
+            <fa icon="angle-left" class="has-text-info" />
+          </button>
+          <p>Junho, 2022</p>
+          <button class="button is-small">
+            <fa icon="angle-right" class="has-text-info" />
+          </button>
+        </div>
     </section>
+   
     <section class="columns wrapped mb-5 mt-5">
       <div class="column square is-3 text box">
         <p class="text-left is-size-5">Matriz</p>
