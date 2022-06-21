@@ -18,13 +18,7 @@
     </div>
   </nav>
   <router-view />
-  <footer>
-    <div class="align">
-      <p>© 2022 - Alterdata Software - Direitos reservados</p>
-      <img src="./assets/logo-alterdata.eea076dd.png" alt="Logo lterdata" />
 
-    </div>
-  </footer>
 </template>
 
 <style>

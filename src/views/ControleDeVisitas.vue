@@ -81,263 +81,246 @@
       </section>
     </section>
 
-    <section class="table-container">
-      <div class="table-search mb-5">
-        <div class="filters">
-          <p class="has-text-left">Filtrar base</p>
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button
-                class="button"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu"
-              >
-                <span>Bases</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item"> Geral </a>
-                <a class="dropdown-item"> Matriz </a>
-                <a href="#" class="dropdown-item is-hoverable"> Filiais </a>
-                <a href="#" class="dropdown-item"> Representaçãoes </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="is-flex is-justify-content-center">
 
-        <div class="filters">
-          <label class="has-text-right">Pesquisar na tabela abaixo</label>
-          <div class="search-container">
-            <input
-              class="input is-normal"
-              type="text"
-              placeholder="Pesquisar..."
-            />
-            <button class="button has-text-link">
-              <fa icon="search" />
-            </button>
-          </div>
-        </div>
+      <div class="file">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume" @change="onChange" />
+          <span class="file-cta">
+            <span class="file-label"> Arquivo... </span>
+          </span>
+        </label>
       </div>
-      <table
-        class="mb-5 table table-size is-striped is-bordered is-narrow is-hoverable"
-      >
-        <thead>
-          <tr class="has-text-centered head-size">
-            <th class="is-vcentered">Base</th>
-            <th class="has-text-centered is-vcentered">Sim</th>
-            <th class="has-text-centered is-vcentered">Não</th>
-            <th class="has-text-centered is-vcentered">Total</th>
-            <th class="has-text-centered is-vcentered">%</th>
-            <th class="column-fixed is-vcentered">Observações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
 
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
+      <xlsx-read :file="file">
+        <xlsx-json>
+          <template #default="{ collection }">
+            <div>
+              {{ file ? toJson(collection) : "" }}
+            </div>
+          </template>
+        </xlsx-json>
+      </xlsx-read>
+    </div>
 
-          <tr>
-            <th>Teresópolis</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <th>Brasília</th>
-            <td>10</td>
-            <td>0</td>
-            <td>10</td>
-            <td>100</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <th>Rio de Janeiro</th>
-            <td>2</td>
-            <td>1</td>
-            <td>3</td>
-            <td>66</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <th>São Paulo</th>
-            <td>10</td>
-            <td>0</td>
-            <td>10</td>
-            <td>100</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <th>Petrópolis</th>
-            <td>10</td>
-            <td>0</td>
-            <td>10</td>
-            <td>100</td>
-            <td>
-              <div class="flex">
-                <input class="input is-small" type="text" />
-              </div>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot></tfoot>
-      </table>
-    </section>
+    <div class="is-flex is-justify-content-center">
+      <table class="table mt-5">
+      <thead>
+        <tr>
+          <th class="has-text-centered" title="BASE">BASE</th>
+          <th class="has-text-centered" title="SIM">SIM</th>
+          <th class="has-text-centered" title="NAO">NÃO</th>
+          <th class="has-text-centered" title="TOTAL">TOTAL</th>
+          <th class="has-text-centered" title="PERCENT">%</th>
+          <th class="has-text-centered" title="OBS">Observações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="base in bases" :key="base.nome">
+          <td>
+            <p>{{ base.name }}</p>
+          </td>
+          <td>
+            <p>{{ base.sim }}</p>
+          </td>
+          <td>
+            <p>{{ base.nao }}</p>
+          </td>
+          <td>
+            <p>{{ base.total }}</p>
+          </td>
+          <td>
+            <p>{{ base.percent }}</p>
+          </td>
+          <td>
+            <div class="is-flex">
+              <input class="input mr-2" type="text" :style="'width:300px'" />
+              <button class="button mr-1">Editar</button>
+              <button class="button">Excluir</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </main>
 </template>
 
-<style lang="scss" scoped>
-.main-container {
-  position: relative; 
-  min-height: 100%;
-  width: 80%;
-  margin: 0 auto;
+<script>
+  import {
+    XlsxRead,
+    XlsxJson,
+  } from "../../node_modules/vue3-xlsx/dist/vue3-xlsx.cjs";
 
-  .data-container {
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  export default {
+    components: {
+      XlsxRead,
+      XlsxJson,
+    },
+    data() {
+      return {
+        file: null,
+        json: {},
+        bases: [],
+      };
+    },
 
-      h1 {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.6rem;
-        color: #296fa8;
-      }
+    methods: {
+      onChange(event) {
+        this.file = event.target.files ? event.target.files[0] : null;
+      },
 
-      .date-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+      },
 
-        p {
-          font-size: 18px;
-          text-transform: uppercase;
-          padding: 5px 8px;
-          background: #fff;
-          border-top: 1px solid #bebebe9d;
-          border-bottom: 1px solid #bebebe9d;
+      toJson(collection) {
+        this.json = collection;
+
+        if (this.json) {
+          this.json.forEach((line) => {
+            
+            const index = this.bases.findIndex((object) => {
+              return object.name === line["Repr. usuário "];
+            });
+
+            if (index === -1) {
+              const simCount = this.json
+                .filter((item) => item["Ficha de visita recebida"] === "S")
+                .filter(
+                  (item) => item["Repr. usuário "] === line["Repr. usuário "]
+                ).length;
+
+              const naoCount = this.json
+                .filter((item) => item["Ficha de visita recebida"] === "N")
+                .filter(
+                  (item) => item["Repr. usuário "] === line["Repr. usuário "]
+                ).length;
+
+              this.bases.push({
+                name: line["Repr. usuário "],
+                sim: simCount,
+                nao: naoCount,
+                total: simCount + naoCount,
+                percent:
+                  ((simCount / (simCount + naoCount)) * 100).toFixed() + "%",
+              });
+            }
+          });
+
+          this.bases = this.bases.sort((a, b) => {
+            return a.name.localeCompare(b.name);
+          });
         }
-      }
-    }
+      },
+    },
+  };
+</script>
 
-    .cards {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+<style lang="scss" scoped>
+  .main-container {
+    position: relative;
+    min-height: 100%;
+    width: 80%;
+    margin: 0 auto;
 
-      .card-box {
-        width: 270px;
-        height: 180px;
-        background: #fff;
-        padding: 0 30px;
+    .data-container {
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        .flex {
-          width: 100%;
+        h1 {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1.6rem;
+          color: #296fa8;
+        }
+
+        .date-wrapper {
           display: flex;
           align-items: center;
-          justify-content: space-around;
+          justify-content: center;
 
-          .separator {
-            width: 1.3px;
-            height: 40px;
-            background: #1d72aa;
+          p {
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 5px 8px;
+            background: #fff;
+            border-top: 1px solid #bebebe9d;
+            border-bottom: 1px solid #bebebe9d;
           }
         }
       }
 
-      .text {
+      .cards {
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-        justify-content: center;
 
-        .text-left {
-          align-self: flex-start;
+        .card-box {
+          width: 270px;
+          height: 180px;
+          background: #fff;
+          padding: 0 30px;
+
+          .flex {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .separator {
+              width: 1.3px;
+              height: 40px;
+              background: #1d72aa;
+            }
+          }
         }
 
-        .text-bold {
-          font-weight: bolder;
-        }
-      }
-    }
-  }
-
-  .table-container {
-    // height: 53vh;
-    .table-search {
-      display: flex;
-      justify-content: space-between;
-
-      .filters {
-        display: flex;
-        flex-direction: column;
-        font-size: 16px;
-
-        .search-container {
+        .text {
           display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .text-left {
+            align-self: flex-start;
+          }
+
+          .text-bold {
+            font-weight: bolder;
+          }
         }
       }
     }
 
-    .table-size {
-      width: 100%;
+    .table-container {
+      // height: 53vh;
+      .table-search {
+        display: flex;
+        justify-content: space-between;
 
-      .table-scroll {
-        display: block;
-        height: 200px;
-        overflow: auto;
+        .filters {
+          display: flex;
+          flex-direction: column;
+          font-size: 16px;
+
+          .search-container {
+            display: flex;
+          }
+        }
+      }
+
+      .table-size {
+        width: 100%;
+
+        .table-scroll {
+          display: block;
+          height: 200px;
+          overflow: auto;
+        }
       }
     }
   }
-}
 </style>
