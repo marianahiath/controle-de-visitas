@@ -5,7 +5,7 @@ import store from './store'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-require('@/sass/mystyles.scss');
+require('@/sass/styles.scss');
 
 library.add(fas);
 

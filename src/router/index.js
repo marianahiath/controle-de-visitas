@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ControleDeVisitas from '../views/ControleDeVisitas.vue'
+import HistoricoDeVisitas from '../views/HistoricoDeVisitas.vue'
 
 const routes = [
   {
@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/controle-de-visitas',
     name: 'controle-de-visitas',
-    component: ControleDeVisitas
+    component: HistoricoDeVisitas
   }
 ]
 
